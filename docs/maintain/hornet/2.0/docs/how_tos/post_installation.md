@@ -1,7 +1,7 @@
 ---
 description: Introducing the HORNET nodes configuration files and their settings.
 image: /img/logo/HORNET_logo.png
-keywords:
+tags:
   - IOTA Node
   - HORNET Node
   - Configuration
@@ -71,3 +71,11 @@ When using our [recommended setup](using_docker.md) this is done for you automat
 ### Other
 
 You can find all the HTTP REST API related options in the [`config.json` reference](../references/configuration.md#restapi)
+
+## Update to 2.x.x
+
+You can update HORNET to the latest stable version with no breaking updates by running the following command:
+
+```sh
+docker compose down && docker compose pull && docker compose up -d
+```

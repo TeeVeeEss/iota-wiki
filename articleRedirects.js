@@ -10,30 +10,6 @@ function directoryExists(directoryPath) {
 
 const ApiCore = [
   {
-    from: '/develop/category/nodes/rest-api/messages',
-    to: '/apis/core/v1/submit-a-message',
-  },
-  {
-    from: '/develop/category/nodes/rest-api/milestones',
-    to: '/apis/core/v1/look-up-a-milestone-by-a-given-milestone-index',
-  },
-  {
-    from: '/develop/category/nodes/rest-api/node',
-    to: '/apis/core/v1/returns-the-health-of-the-node',
-  },
-  {
-    from: '/develop/category/nodes/rest-api/peers',
-    to: '/apis/core/v1/get-information-about-the-peers-of-the-node',
-  },
-  {
-    from: '/develop/category/nodes/rest-api/tangle',
-    to: '/apis/core/v1/returns-tips-that-are-ideal-for-attaching-a-message',
-  },
-  {
-    from: '/develop/category/nodes/rest-api/utxo',
-    to: '/apis/core/v1/find-an-output-by-its-identifier',
-  },
-  {
     from: '/shimmer/develop/category/nodes/core-rest-api/blocks',
     to: '/apis/core/v2/submit-a-block',
   },
@@ -65,10 +41,6 @@ const ApiCore = [
 
 exports.articleRedirects = [
   ...(directoryExists('./docs/build/apis/docs/core') ? ApiCore : []),
-  {
-    from: '/develop/endpoints/devnet',
-    to: '/build/networks-endpoints',
-  },
   {
     from: '/develop/endpoints/mainnet',
     to: '/build/networks-endpoints',
@@ -123,7 +95,7 @@ exports.articleRedirects = [
   },
   {
     from: '/learn/about-iota/energy-efficiency',
-    to: '/learn/protocols/chrysalis/introduction',
+    to: '/learn/protocols/stardust/introduction',
   },
   {
     from: '/learn/about-iota/messages',
@@ -541,5 +513,105 @@ exports.articleRedirects = [
   {
     from: '/use/wallets/what-is-a-wallet',
     to: '/get-started/wallets/firefly',
+  },
+  {
+    from: '/identity.rs/concepts/decentralized_identifiers/alias/',
+    to: '/identity.rs/explanations/about-alias-outputs/',
+  },
+  {
+    from: '/identity.rs/concepts/decentralized_identifiers/create/',
+    to: '/identity.rs/how-tos/decentralized-identifiers/create/',
+  },
+  {
+    from: '/identity.rs/concepts/decentralized_identifiers/delete/',
+    to: '/identity.rs/how-tos/decentralized-identifiers/delete/',
+  },
+  {
+    from: '/identity.rs/concepts/decentralized_identifiers/overview/',
+    to: '/identity.rs/explanations/decentralized-identifiers/',
+  },
+  {
+    from: '/identity.rs/concepts/decentralized_identifiers/resolve/',
+    to: '/identity.rs/how-tos/decentralized-identifiers/resolve/',
+  },
+  {
+    from: '/identity.rs/concepts/decentralized_identifiers/update/',
+    to: '/identity.rs/how-tos/decentralized-identifiers/update/',
+  },
+  {
+    from: '/identity.rs/concepts/domain_linkage/',
+    to: '/identity.rs/how-tos/domain-linkage/create-and-verify/',
+  },
+  {
+    from: '/identity.rs/concepts/key_storage/',
+    to: '/identity.rs/how-tos/key-storage/',
+  },
+  {
+    from: '/identity.rs/concepts/verifiable_credentials/create/',
+    to: '/identity.rs/how-tos/verifiable-credentials/create/',
+  },
+  {
+    from: '/identity.rs/concepts/verifiable_credentials/overview/',
+    to: '/identity.rs/explanations/verifiable-credentials/',
+  },
+  {
+    from: '/identity.rs/concepts/verifiable_credentials/revocation/',
+    to: '/identity.rs/how-tos/verifiable-credentials/revocation/',
+  },
+  {
+    from: '/identity.rs/concepts/verifiable_credentials/verifiable_presentations/',
+    to: '/identity.rs/explanations/verifiable-presentations/',
+  },
+  {
+    from: '/identity.rs/decentralized_identity/',
+    to: '/identity.rs/explanations/decentralized-identifiers/',
+  },
+  {
+    from: '/identity.rs/getting_started/create_and_publish/',
+    to: '/identity.rs/how-tos/decentralized-identifiers/create/',
+  },
+  {
+    from: '/identity.rs/getting_started/install/',
+    to: '/identity.rs/getting-started/rust/',
+  },
+  {
+    from: '/identity.rs/getting_started/overview/',
+    to: '/identity.rs/getting-started/rust/',
+  },
+  {
+    from: '/identity.rs/introduction/',
+    to: '/identity.rs/welcome/',
+  },
+  {
+    from: '/identity.rs/libraries/overview/',
+    to: '/identity.rs/welcome/',
+  },
+  {
+    from: '/identity.rs/libraries/rust/getting_started/',
+    to: '/identity.rs/getting-started/rust/',
+  },
+  {
+    from: '/identity.rs/libraries/wasm/api_reference/',
+    to: '/identity.rs/references/api/wasm/',
+  },
+  {
+    from: '/identity.rs/libraries/wasm/getting_started/',
+    to: '/identity.rs/getting-started/wasm/',
+  },
+  {
+    from: '/identity.rs/specs/did/iota_did_method_spec/',
+    to: '/identity.rs/references/specifications/iota-did-method-spec/',
+  },
+  {
+    from: '/identity.rs/specs/did/overview/',
+    to: '/identity.rs/references/specifications/overview/',
+  },
+  {
+    from: '/identity.rs/specs/overview/',
+    to: '/identity.rs/references/specifications/overview/',
+  },
+  {
+    from: '/identity.rs/specs/revocation_bitmap_2022/',
+    to: '/identity.rs/references/specifications/revocation-bitmap-2022/',
   },
 ];

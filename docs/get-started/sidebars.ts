@@ -70,6 +70,7 @@ module.exports = {
       },
       items: [
         'wallets/firefly',
+        'wallets/bloom',
         {
           type: 'link',
           label: 'TanglePay',
@@ -91,6 +92,26 @@ module.exports = {
           type: 'link',
           label: 'Shimmer Explorer',
           href: 'https://explorer.shimmer.network/',
+        },
+        {
+          type: 'link',
+          label: 'Shimmer EVM Explorer',
+          href: 'https://explorer.evm.shimmer.network/',
+        },
+        {
+          type: 'link',
+          label: 'Shimmer EVM Toolkit',
+          href: 'https://evm-toolkit.evm.shimmer.network/',
+        },
+        {
+          type: 'doc',
+          label: 'Shimmer Bridge',
+          id: 'tools/shimmer-bridge',
+        },
+        {
+          type: 'doc',
+          label: 'Legacy Network Migration Tool',
+          id: 'tools/legacy-migration-tool',
         },
       ],
     },

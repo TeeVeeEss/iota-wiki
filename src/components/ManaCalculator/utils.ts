@@ -7,6 +7,7 @@ import {
   SHIMMER_GENERATION_PER_SLOT,
   SHIMMER_SUPPLY,
   SHIMMER_THROUGHPUT,
+  SLOT_DURATION,
   SLOTS_IN_EPOCH,
 } from './constants';
 import { CongestionType, NetworkType, UserType } from './enums';
@@ -51,7 +52,7 @@ export function getNetworkCongestion(
     const generation = getNetworkGenerationPerSlot(network);
     const throughput = getNetworkThroughput(network);
 
-    return (supply * generation) / (10 * throughput);
+    return (supply * generation) / (SLOT_DURATION * throughput);
   } else {
     if (network == NetworkType.IOTA) {
       return IOTA_CONGESTION[congestionType];
@@ -88,3 +89,22 @@ export function getStakedOrDelegated(userType: UserType) {
 export const roundMax = function (num: number, places: number) {
   return +(Math.round(Number(num + 'e+' + places)) + 'e-' + places);
 };
+
+export function getValidInputValue(
+  num: string,
+  transformNumber?: (number: number) => number,
+): number {
+  let value = Number(Number(num).toString());
+
+  if (transformNumber) {
+    value = transformNumber(value);
+  }
+
+  const isInvalid = isNaN(value);
+
+  if (isInvalid) {
+    throw new Error('Invalid number');
+  }
+
+  return value;
+}
